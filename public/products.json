@@ -1,0 +1,86 @@
+[
+  {
+    "id": 101,
+    "name": "Throwback Hip Bag",
+    "price": 90,
+    "href": "#",
+    "category": "bag",
+    "color": "Salmon",
+    "quantity": 8,
+    "imageSrc": "https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg",
+    "imageAlt": "Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt."
+  },
+  {
+    "id": 102,
+    "name": "Apple iPhone 14 Pro Max",
+    "price": 1500,
+    "href": "#",
+    "category": "mobile",
+    "color": "White",
+    "quantity": 8,
+    "imageSrc": "https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg",
+    "imageAlt": "Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt."
+  },
+  {
+    "id": 103,
+    "name": "T-shirt for Men",
+    "price": 50,
+    "href": "#",
+    "category": "clothing",
+    "color": "black",
+    "quantity": 25,
+    "imageSrc": "https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg",
+    "imageAlt": "Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt."
+  },
+  {
+    "id": 104,
+    "name": "DELL XPS Core i5 13th Gen Laptop",
+    "price": 450,
+    "href": "#",
+    "category": "laptop",
+    "color": "Metal Black",
+    "quantity": 4,
+    "imageSrc": "https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg",
+    "imageAlt": "Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt."
+  },
+  {
+    "id": 105,
+    "name": "Canon 750D DSLR Camera",
+    "price": 750,
+    "href": "#",
+    "category": "camera",
+    "color": "black",
+    "quantity": 2,
+    "imageSrc": "https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg",
+    "imageAlt": "Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt."
+  },
+  {
+    "id": 106,
+    "name": "Women Designer Dress",
+    "price": 250,
+    "href": "#",
+    "category": "clothing",
+    "color": "green",
+    "quantity": 10,
+    "imageSrc": "https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg",
+    "imageAlt": "Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt."
+  },
+
+  {
+    "id": "252.119.157.80/21",
+    "name": "T_shirt",
+    "price": 290,
+    "href": "#",
+    "category": "bag",
+    "imageSrc": "https://www.shahebbibi.com/wp-content/uploads/2019/04/IMG_4542.jpg",
+    "imageAlt": "T-Shirt",
+    "colors": ["black", "gray", "red", "white"],
+    "sizes": [
+      { "name": "XXS", "inStock": true, "quantity": 9 },
+      { "name": "XXl", "inStock": true, "quantity": 3 },
+      { "name": "Xl", "inStock": true, "quantity": 6 },
+      { "name": "L", "inStock": true, "quantity": 2 },
+      { "name": "M", "inStock": true, "quantity": 8 }
+    ]
+  }
+]
