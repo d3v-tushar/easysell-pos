@@ -1,6 +1,7 @@
 import React, { Fragment, useContext, useState } from "react";
 import CartItem from "../CartItem/CartItem";
 import { ProductContext } from "../../App";
+import { Link } from 'react-router-dom';
 
 
 const Cart = () => {
@@ -49,12 +50,12 @@ const Cart = () => {
                 Shipping and taxes calculated at checkout.
               </p>
               <div className="mt-6">
-                <a
-                  href="/"
+                <Link
+                  to="/payment"
                   className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
                 >
                   Checkout
-                </a>
+                </Link>
               </div>
               
             </div>

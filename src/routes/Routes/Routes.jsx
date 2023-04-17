@@ -8,6 +8,7 @@ import Register from './../../pages/Register/Register';
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import AddProduct from "../../pages/AddProduct/AddProduct";
 import Orders from "../../pages/Orders/Orders";
+import Payment from "../../pages/Payment/Payment";
 
 export const routes = createBrowserRouter([
     {
@@ -33,6 +34,10 @@ export const routes = createBrowserRouter([
             {
                 path: '/orders',
                 element: <Orders/>
+            },
+            {
+                path: '/payment',
+                element: <Payment/>
             },
         ]
     },
