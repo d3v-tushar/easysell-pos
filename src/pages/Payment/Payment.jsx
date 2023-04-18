@@ -1,6 +1,7 @@
 import React, {  useContext,  } from "react";
 import { ProductContext } from "../../App";
 import { AuthContext } from './../../contexts/authcontext/AuthProvider';
+import { Link } from 'react-router-dom';
 const Payment = () => {
     const {checkout} = useContext(ProductContext);
     const {user}= useContext(AuthContext);
@@ -85,35 +86,22 @@ const Payment = () => {
           <div className="bg-white py-12 md:py-24">
             <div className="mx-auto max-w-lg px-4 lg:px-8">
               <form className="grid grid-cols-6 gap-4">
-                <div className="col-span-3">
+                <div className="col-span-6">
                   <label
                     for="FirstName"
                     className="block text-xs font-medium text-gray-700"
                   >
-                    First Name
+                    Coustomer Name
                   </label>
 
                   <input
                     type="text"
-                    id="FirstName"
+                    id="Coustomer Name"
                     className="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
                   />
                 </div>
 
-                <div className="col-span-3">
-                  <label
-                    for="LastName"
-                    className="block text-xs font-medium text-gray-700"
-                  >
-                    Last Name
-                  </label>
-
-                  <input
-                    type="text"
-                    id="LastName"
-                    className="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
-                  />
-                </div>
+              
 
                 <div className="col-span-6">
                   <label
@@ -147,54 +135,26 @@ const Payment = () => {
 
                 <fieldset className="col-span-6">
                   <legend className="block text-sm font-medium text-gray-700">
-                    Card Details
+                    Payment Type :
                   </legend>
 
-                  <div className="mt-1 -space-y-px rounded-md bg-white shadow-sm">
-                    <div>
-                      <label for="CardNumber" className="sr-only">
-                        {" "}
-                        Card Number{" "}
+                  <div>
+                      <label for="Country" className="sr-only">
+                        payment Detail
                       </label>
 
-                      <input
-                        type="text"
-                        id="CardNumber"
-                        placeholder="Card Number"
-                        className="relative mt-1 w-full rounded-t-md border-gray-200 focus:z-10 sm:text-sm"
-                      />
+                      <select
+                        id="Country"
+                        className="relative w-full rounded-t-md border-gray-200 focus:z-10 sm:text-sm"
+                      >
+                        <option>Cash</option>
+                        <option>Card</option>
+                        <option>Cheque</option>
+                        <option>Bank transfer</option>
+                        <option>Other</option>
+                        
+                      </select>
                     </div>
-
-                    <div className="flex">
-                      <div className="flex-1">
-                        <label for="CardExpiry" className="sr-only">
-                          {" "}
-                          Card Expiry{" "}
-                        </label>
-
-                        <input
-                          type="text"
-                          id="CardExpiry"
-                          placeholder="Expiry Date"
-                          className="relative w-full rounded-es-md border-gray-200 focus:z-10 sm:text-sm"
-                        />
-                      </div>
-
-                      <div className="-ms-px flex-1">
-                        <label for="CardCVC" className="sr-only">
-                          {" "}
-                          Card CVC{" "}
-                        </label>
-
-                        <input
-                          type="text"
-                          id="CardCVC"
-                          placeholder="CVC"
-                          className="relative w-full rounded-ee-md border-gray-200 focus:z-10 sm:text-sm"
-                        />
-                      </div>
-                    </div>
-                  </div>
                 </fieldset>
 
                 <fieldset className="col-span-6">
@@ -202,45 +162,31 @@ const Payment = () => {
                     Billing Address
                   </legend>
 
-                  <div className="mt-1 -space-y-px rounded-md bg-white shadow-sm">
-                    <div>
-                      <label for="Country" className="sr-only">
-                        Country
-                      </label>
+                 <textarea className="relative w-full rounded-t-md border-gray-200 focus:z-10 sm:text-sm">
 
-                      <select
-                        id="Country"
-                        className="relative w-full rounded-t-md border-gray-200 focus:z-10 sm:text-sm"
-                      >
-                        <option>England</option>
-                        <option>Wales</option>
-                        <option>Scotland</option>
-                        <option>France</option>
-                        <option>Belgium</option>
-                        <option>Japan</option>
-                      </select>
-                    </div>
-
-                    <div>
-                      <label className="sr-only" for="PostalCode">
-                        {" "}
-                        ZIP/Post Code{" "}
-                      </label>
-
-                      <input
-                        type="text"
-                        id="PostalCode"
-                        placeholder="ZIP/Post Code"
-                        className="relative w-full rounded-b-md border-gray-200 focus:z-10 sm:text-sm"
-                      />
-                    </div>
-                  </div>
+                 </textarea>
                 </fieldset>
 
-                <div className="col-span-6">
-                  <button className="block w-full rounded-md bg-black p-2.5 text-sm text-white transition hover:shadow-lg">
-                    Pay Now
-                  </button>
+                <div className="flex col-span-6">
+                 
+                 <div className="   w-full p-2">
+                 <Link
+                  to="/pos"
+                  className="block  w-full text-center rounded-md bg-black p-2 text-md text-white transition hover:shadow-lg"
+                >
+                  Pay Now
+                </Link>
+                 </div>
+                 
+                 
+                 <div className="   w-full py-2">
+                 <Link
+                  to="/pos"
+                  className="block  text-center w-full rounded-md border-2 border-black bg-white p-2 text-md text-black transition hover:shadow-lg"
+                >
+                  Cancel
+                </Link>
+                 </div>
                 </div>
               </form>
             </div>
