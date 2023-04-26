@@ -9,11 +9,11 @@ import { createContext, useEffect, useState } from 'react'
 export const ProductContext = createContext();
 function App() {
   const [products, setProducts] = useState([]);
-  const [darkmode, setDarkMode] = useState(true);
+  //const [darkmode, setDarkMode] = useState(true);
   const [checkout, setCheckOut] = useState([]);
   const value = {products, checkout, setCheckOut}
   useEffect(() =>{
-      fetch(`products.json`)
+      fetch(`https://easy-sell-server.vercel.app/products`)
       .then(res => res.json())
       .then(data => setProducts(data))
   }, [])

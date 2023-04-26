@@ -19,7 +19,7 @@ import { MdPostAdd } from "react-icons/md";
 import { MdArrowCircleRight } from "react-icons/md";
 
 const SidebarNav = () => {
-  const { collapseSidebar } = useProSidebar();
+  // const { collapseSidebar } = useProSidebar();
 
   return (
     <Sidebar
@@ -31,9 +31,9 @@ const SidebarNav = () => {
       }}
       className="h-screen w-full"
     >
-      <button onClick={() => collapseSidebar()}>
+      {/* <button onClick={() => collapseSidebar()}>
         <MdArrowCircleRight className=" m-5 text-4xl font-semibold" />
-      </button>
+      </button> */}
       <Menu
         rootStyles={{
           ["." + menuClasses.button]: {

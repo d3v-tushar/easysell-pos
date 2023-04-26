@@ -13,7 +13,7 @@ const ProductContainer = ({ filteredProducts, query }) => {
             </div>
           ) : (
             filteredProducts.map((product) => (
-              <ProductCard product={product} key={product.id} />
+              <ProductCard product={product} key={product._id} />
             ))
           )}
         </ul>

@@ -7,30 +7,29 @@ import { Link } from 'react-router-dom';
 const Cart = () => {
   const {checkout} = useContext(ProductContext);
   let total = 0;
-  checkout.map(product => total = total + parseInt(product.price));
-  console.log(total);
+  checkout.map(product => total = total + (parseInt(product.quantity) * parseInt(product.price)));
+  //console.log(checkout);
   
   return (
-          <div className="flex flex-col h-[92vh] bg-white shadow-xl">
-            <div className="flex-1 overflow-y-auto py-6 px-4 sm:px-6">
+          <div className="flex flex-col w-[30vw] h-[92vh] bg-white shadow-xl">
+            <div className="flex-1 overflow-y-scroll py-6 px-4 sm:px-6">
               <div className="flex items-start z-10 sticky top-0 bg-white justify-between">
                 <h2 className="text-lg font-medium text-gray-900">
                   Shopping Cart
                 </h2>
               </div>
 
-              <div className="mt-8">
-                <div className="flow-root">
+             
+                <div className="flow-root mt-8">
                   <ul className="-my-6 divide-y divide-gray-200">
                     {
                       checkout.length == 0 ? <div><h2 className="text-center font-semibold">Nothing In Cart</h2></div> :
-                      checkout.map((product) => (
-                        <CartItem key={product.id} product={product}/>
+                      checkout.map((product, index) => (
+                        <CartItem key={index} product={product}/>
                       ))
                     }
                   </ul>
                 </div>
-              </div>
             </div>
 
             <div className="border-t border-gray-200 py-6 px-4 sm:px-6">

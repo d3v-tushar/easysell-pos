@@ -2,6 +2,7 @@ import React, {  useContext,  } from "react";
 import { ProductContext } from "../../App";
 import { AuthContext } from './../../contexts/authcontext/AuthProvider';
 import { Link } from 'react-router-dom';
+import CartItem from "../../components/CartItem/CartItem";
 const Payment = () => {
     const {checkout} = useContext(ProductContext);
     const {user}= useContext(AuthContext);
@@ -50,29 +51,7 @@ const Payment = () => {
                 <div className="flow-root">
                   <ul className="-my-4 divide-y divide-gray-100">
                    {checkout.map((item,index)=>
-                         <li key={index} className="flex items-center gap-4 py-4">
-                         <img
-                           src={item.imageSrc}
-                           alt=""
-                           className="h-16 w-16 rounded object-cover"
-                         />
-   
-                         <div>
-                           <h3 className="text-sm text-gray-900">{item.name}</h3>
-   
-                           <dl className="mt-0.5 space-y-px text-[10px] text-gray-600">
-                             <div>
-                               <dt className="inline">Size:</dt>
-                               <dd className="inline">XXS</dd>
-                             </div>
-   
-                             <div>
-                               <dt className="inline">Color:</dt>
-                               <dd className="inline">White</dd>
-                             </div>
-                           </dl>
-                         </div>
-                       </li>
+                         <CartItem product={item} key={index}/>
 
                    )}
 

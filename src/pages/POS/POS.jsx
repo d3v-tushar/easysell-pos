@@ -11,8 +11,8 @@ const POS = () => {
   const clonedProducts = [...products];
   const [selected, setSelected] = useState(products[0]);
   const [query, setQuery] = useState('');
-  console.log(query);
-  console.log(selected);
+  // console.log(query);
+  // console.log(selected);
 
 const filteredProducts =
   query === ''
@@ -21,12 +21,12 @@ const filteredProducts =
         (product.name).toLowerCase().replace(/\s+/g, '').includes(query.toLowerCase().replace(/\s+/g, ''))
     )
     return (
-        <div className='w-full mx-auto grid grid-cols-4'>
-            <div className='col-span-3 h-[92vh] overflow-y-scroll'>
+        <div className='w-full mx-auto flex'>
+            <div className='h-[92vh] overflow-y-scroll'>
                <ProductSearchBar setQuery={setQuery}/>
                <DisplayProducts filteredProducts={filteredProducts} query={query}/>
             </div>
-            <Cart className='col-span-1'/>
+            <Cart/>
         </div>
     );
 };
